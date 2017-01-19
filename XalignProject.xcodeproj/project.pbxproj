@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9465B2F31E3060B400B3B69F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9465B2F21E3060B400B3B69F /* AppDelegate.swift */; };
+		9465B2F51E3060B400B3B69F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9465B2F41E3060B400B3B69F /* Assets.xcassets */; };
+		9465B3061E3060CA00B3B69F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9465B3051E3060CA00B3B69F /* Cocoa.framework */; };
+		9465B30B1E3060CA00B3B69F /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9465B30A1E3060CA00B3B69F /* SourceEditorExtension.swift */; };
+		9465B30D1E3060CA00B3B69F /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9465B30C1E3060CA00B3B69F /* SourceEditorCommand.swift */; };
+		9465B3111E3060CA00B3B69F /* Xalign.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9465B3031E3060CA00B3B69F /* Xalign.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9465B30F1E3060CA00B3B69F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9465B2E71E3060B400B3B69F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9465B3021E3060CA00B3B69F;
+			remoteInfo = Xalign;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9465B3151E3060CA00B3B69F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9465B3111E3060CA00B3B69F /* Xalign.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9465B2EF1E3060B400B3B69F /* XalignProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XalignProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9465B2F21E3060B400B3B69F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9465B2F41E3060B400B3B69F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9465B2F91E3060B500B3B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9465B3031E3060CA00B3B69F /* Xalign.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Xalign.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9465B3051E3060CA00B3B69F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9465B3091E3060CA00B3B69F /* Xalign.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Xalign.entitlements; sourceTree = "<group>"; };
+		9465B30A1E3060CA00B3B69F /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		9465B30C1E3060CA00B3B69F /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		9465B30E1E3060CA00B3B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9465B2EC1E3060B400B3B69F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9465B3001E3060CA00B3B69F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9465B3061E3060CA00B3B69F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9465B2E61E3060B400B3B69F = {
+			isa = PBXGroup;
+			children = (
+				9465B2F11E3060B400B3B69F /* XalignProject */,
+				9465B3071E3060CA00B3B69F /* Xalign */,
+				9465B3041E3060CA00B3B69F /* Frameworks */,
+				9465B2F01E3060B400B3B69F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9465B2F01E3060B400B3B69F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9465B2EF1E3060B400B3B69F /* XalignProject.app */,
+				9465B3031E3060CA00B3B69F /* Xalign.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9465B2F11E3060B400B3B69F /* XalignProject */ = {
+			isa = PBXGroup;
+			children = (
+				9465B2F21E3060B400B3B69F /* AppDelegate.swift */,
+				9465B2F41E3060B400B3B69F /* Assets.xcassets */,
+				9465B2F91E3060B500B3B69F /* Info.plist */,
+			);
+			path = XalignProject;
+			sourceTree = "<group>";
+		};
+		9465B3041E3060CA00B3B69F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9465B3051E3060CA00B3B69F /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9465B3071E3060CA00B3B69F /* Xalign */ = {
+			isa = PBXGroup;
+			children = (
+				9465B30A1E3060CA00B3B69F /* SourceEditorExtension.swift */,
+				9465B30C1E3060CA00B3B69F /* SourceEditorCommand.swift */,
+				9465B30E1E3060CA00B3B69F /* Info.plist */,
+				9465B3081E3060CA00B3B69F /* Supporting Files */,
+			);
+			path = Xalign;
+			sourceTree = "<group>";
+		};
+		9465B3081E3060CA00B3B69F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9465B3091E3060CA00B3B69F /* Xalign.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9465B2EE1E3060B400B3B69F /* XalignProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9465B2FC1E3060B500B3B69F /* Build configuration list for PBXNativeTarget "XalignProject" */;
+			buildPhases = (
+				9465B2EB1E3060B400B3B69F /* Sources */,
+				9465B2EC1E3060B400B3B69F /* Frameworks */,
+				9465B2ED1E3060B400B3B69F /* Resources */,
+				9465B3151E3060CA00B3B69F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9465B3101E3060CA00B3B69F /* PBXTargetDependency */,
+			);
+			name = XalignProject;
+			productName = XalignProject;
+			productReference = 9465B2EF1E3060B400B3B69F /* XalignProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9465B3021E3060CA00B3B69F /* Xalign */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9465B3121E3060CA00B3B69F /* Build configuration list for PBXNativeTarget "Xalign" */;
+			buildPhases = (
+				9465B2FF1E3060CA00B3B69F /* Sources */,
+				9465B3001E3060CA00B3B69F /* Frameworks */,
+				9465B3011E3060CA00B3B69F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Xalign;
+			productName = Xalign;
+			productReference = 9465B3031E3060CA00B3B69F /* Xalign.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9465B2E71E3060B400B3B69F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = SMIT;
+				TargetAttributes = {
+					9465B2EE1E3060B400B3B69F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 39AM9RN6LJ;
+						ProvisioningStyle = Automatic;
+					};
+					9465B3021E3060CA00B3B69F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 39AM9RN6LJ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9465B2EA1E3060B400B3B69F /* Build configuration list for PBXProject "XalignProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9465B2E61E3060B400B3B69F;
+			productRefGroup = 9465B2F01E3060B400B3B69F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9465B2EE1E3060B400B3B69F /* XalignProject */,
+				9465B3021E3060CA00B3B69F /* Xalign */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9465B2ED1E3060B400B3B69F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9465B2F51E3060B400B3B69F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9465B3011E3060CA00B3B69F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9465B2EB1E3060B400B3B69F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9465B2F31E3060B400B3B69F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9465B2FF1E3060CA00B3B69F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9465B30B1E3060CA00B3B69F /* SourceEditorExtension.swift in Sources */,
+				9465B30D1E3060CA00B3B69F /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9465B3101E3060CA00B3B69F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9465B3021E3060CA00B3B69F /* Xalign */;
+			targetProxy = 9465B30F1E3060CA00B3B69F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9465B2FA1E3060B500B3B69F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9465B2FB1E3060B500B3B69F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		9465B2FD1E3060B500B3B69F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 39AM9RN6LJ;
+				INFOPLIST_FILE = XalignProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.demo.XalignProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9465B2FE1E3060B500B3B69F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 39AM9RN6LJ;
+				INFOPLIST_FILE = XalignProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.demo.XalignProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9465B3131E3060CA00B3B69F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Xalign/Xalign.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 39AM9RN6LJ;
+				INFOPLIST_FILE = Xalign/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.demo.XalignProject.Xalign;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9465B3141E3060CA00B3B69F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Xalign/Xalign.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 39AM9RN6LJ;
+				INFOPLIST_FILE = Xalign/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.demo.XalignProject.Xalign;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9465B2EA1E3060B400B3B69F /* Build configuration list for PBXProject "XalignProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9465B2FA1E3060B500B3B69F /* Debug */,
+				9465B2FB1E3060B500B3B69F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9465B2FC1E3060B500B3B69F /* Build configuration list for PBXNativeTarget "XalignProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9465B2FD1E3060B500B3B69F /* Debug */,
+				9465B2FE1E3060B500B3B69F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9465B3121E3060CA00B3B69F /* Build configuration list for PBXNativeTarget "Xalign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9465B3131E3060CA00B3B69F /* Debug */,
+				9465B3141E3060CA00B3B69F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9465B2E71E3060B400B3B69F /* Project object */;
+}
