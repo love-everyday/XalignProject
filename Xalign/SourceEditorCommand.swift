@@ -26,11 +26,12 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                 textRange.start.line != textRange.end.line else {
                     continue
             }
+            
             var maxLength = 0
             var isFirst = false
             var spaces = ""
             for index in textRange.start.line...textRange.end.line {
-                var line = lines[index] as! String
+                let line = lines[index] as! String
                 if line.contains("=") {
                     let strs = line.components(separatedBy: "=")
                     if strs.count == 2 {
