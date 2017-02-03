@@ -30,10 +30,31 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             var maxLength = 0
             var isFirst = false
             var spaces = ""
+            var componentsStr = "="
+            var specialStr = "///"
+            var preSpaces = " "
+            var tailSpaces = " "
             for index in textRange.start.line...textRange.end.line {
                 let line = lines[index] as! String
-                if line.contains("=") {
-                    let strs = line.components(separatedBy: "=")
+                if !isFirst && line.contains(specialStr) {
+                    guard let rangePre = line.range(of: specialStr) else {
+                        continue
+                    }
+                    let line2 = line.substring(from: rangePre.upperBound)
+                    guard let rangeTail = line2.range(of: specialStr) else {
+                        continue
+                    }
+                    let line3 = line2.substring(to: rangeTail.lowerBound)
+                    if line3.characters.count > 0 {
+                        let ret = removeSpaceAndNewLineCharacter(line3, type: 2)
+                        componentsStr = ret.0
+                        if let startIndex = ret.1, let endIndex = ret.2 {
+                            preSpaces = line3.substring(to: startIndex)
+                            tailSpaces = line3.substring(from: line3.index(endIndex, offsetBy: 1))
+                        }
+                    }
+                } else if line.contains(componentsStr) {
+                    let strs = line.components(separatedBy: componentsStr)
                     if strs.count == 2 {
                         indexs.append(index)
                         var startLine = strs[0]
@@ -62,7 +83,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                 for _ in 0..<off {
                     preStr.append(" ")
                 }
-                let line = spaces + preStr + " = " + otherStrs[i]
+                let line = spaces + preStr + preSpaces + componentsStr + tailSpaces + otherStrs[i]
                 lines.replaceObject(at: index, with: line)
             }
         }
