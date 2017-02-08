@@ -31,7 +31,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             var isFirst = false
             var spaces = ""
             var componentsStr = "="
-            var specialStr = "///"
+            let specialStr = "///"
             var preSpaces = " "
             var tailSpaces = " "
             for index in textRange.start.line...textRange.end.line {
@@ -45,12 +45,20 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                         continue
                     }
                     let line3 = line2.substring(to: rangeTail.lowerBound)
-                    if line3.characters.count > 0 {
+                    if line3.characters.count > 0 && !line3.isEmpty {
                         let ret = removeSpaceAndNewLineCharacter(line3, type: 2)
                         componentsStr = ret.0
-                        if let startIndex = ret.1, let endIndex = ret.2 {
-                            preSpaces = line3.substring(to: startIndex)
-                            tailSpaces = line3.substring(from: line3.index(endIndex, offsetBy: 1))
+                        
+                        if ret.1 == line3.startIndex {
+                            preSpaces = ""
+                        } else {
+                            preSpaces = line3.substring(to: ret.1)
+                        }
+                        
+                        if ret.2 == line3.endIndex {
+                            tailSpaces = ""
+                        } else {
+                            tailSpaces = line3.substring(from: ret.2)
                         }
                     }
                 } else if line.contains(componentsStr) {
@@ -69,9 +77,9 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                             maxLength = length
                         }
                         
-                        if !isFirst, let spaceIndex = ret.1 {
+                        if !isFirst {
                             isFirst = true
-                            spaces = startLine.substring(to: spaceIndex)
+                            spaces = startLine.substring(to: ret.1)
                         }
                     }
                 }
@@ -90,10 +98,10 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         completionHandler(nil)
     }
     
-    func removeSpaceAndNewLineCharacter(_ string: String,type: Int) -> (String, String.Index?, String.Index?) {
+    func removeSpaceAndNewLineCharacter(_ string: String,type: Int) -> (String, String.Index, String.Index) {
         var line = string
-        var startIndex: String.Index?
-        var endIndex: String.Index?
+        var startIndex = string.startIndex
+        var endIndex = string.endIndex
         
         if type == 0 || type == 2 {
             var charIndex = line.startIndex
@@ -111,9 +119,9 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             while char == " " || char == "\n" {
                 charIndex = line.index(before: charIndex)
                 char = line[line.index(before: charIndex)]
+                endIndex = string.index(before: endIndex)
             }
             line = line.substring(to: charIndex)
-            endIndex = charIndex
         }
         return (line, startIndex, endIndex)
     }
